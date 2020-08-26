@@ -1,0 +1,106 @@
+<div class="container">
+    <h2>Formulario Pesajes</h2>
+    <form [formGroup]="formPesaje" (ngSubmit)="onSubmit()" novalidate>
+
+        <div class="client card">
+            
+                <div class="card-body">
+                    <h5 class="card-title">Cliente</h5>
+                    <div class="form-group">
+                        <label for="nombre" class="form-label">Nombre</label>
+                        <input type="text" formControlName="nombre" class="form-control" placeholder="Nombre">
+                        <div *ngIf="formPesaje.get('nombre').errors && (formPesaje.get('nombre').touched 
+                                || formPesaje.get('nombre').dirty)" class="alert alert-danger">
+                            El Nombre es obligatorio
+                        </div>
+        
+                    </div>
+        
+                    <div class="form-group">
+                        <label for="rut" class="form-label">Rut</label>
+                        <input type="text" formControlName="rut" class="form-control" placeholder="Rut">
+                        <div *ngIf="formPesaje.get('rut').errors && (formPesaje.get('rut').touched 
+                                || formPesaje.get('rut').dirty)" class="alert alert-danger">
+                            El Rut es obligatorio
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="razonSocial">Razón Social</label>
+                        <input type="text" formControlName="razonSocial" class="form-control" placeholder="Razón Social">
+                        <div *ngIf="formPesaje.get('razonSocial').errors && (formPesaje.get('razonSocial').touched 
+                                    || formPesaje.get('razonSocial').dirty)" class="alert alert-danger">
+                            La razón social es obligatoria
+                        </div>
+                    </div>
+                </div>
+        </div>
+
+
+        <div class="details card">
+            <div class="card-body">
+                <h5 class="card-title">Detalles</h5>
+                <div class="form-group">
+                    <label for="pesoEntrada" class="form-label">Peso de entrada</label>
+                    <input type="number" formControlName="pesoEntrada" class="form-control" placeholder="Peso de Entrada">
+                    <div *ngIf="formPesaje.get('pesoEntrada').errors && (formPesaje.get('pesoEntrada').touched 
+                                || formPesaje.get('pesoEntrada').dirty)" class="alert alert-danger">
+                        El Peso de entrada obligatorio
+                    </div>
+    
+                </div>
+                <div class="form-group">
+                    <label for="pesoSalida" class="form-label">Peso de salida</label>
+                    <input type="number" formControlName="pesoSalida" class="form-control" placeholder="Peso de Salida">
+                    <div *ngIf="formPesaje.get('pesoSalida').errors && (formPesaje.get('pesoSalida').touched 
+                                || formPesaje.get('pesoSalida').dirty)" class="alert alert-danger">
+                        El peso de salida es obligatorio
+                    </div>
+    
+                </div>
+                <div class="form-group">
+                    <label for="tipoTransaccion"> Tipo de transaccion</label>
+                    <select formControlName="tipoTransaccion" class="form-control">
+                        <option value="compra">Compra</option>
+                        <option selected value="venta">Venta</option>
+                    </select>
+                    <div *ngIf="formPesaje.get('tipoTransaccion').errors && (formPesaje.get('tipoTransaccion').touched 
+                            || formPesaje.get('tipoTransaccion').dirty)" class="alert alert-danger">
+                        Seleccione alguna opción
+                    </div>
+    
+                </div>
+            </div>
+        </div>
+
+        <div class="vehicle card">
+            <div class="card-body">
+                <h5 class="card-title"> Vehiculo</h5>
+                <div class="form-group">
+                    <label for="patente" class="form-label">Patente</label>
+                    <input type="text" formControlName="patente" class="form-control" placeholder="Patente">
+                </div>
+                <div *ngIf="formPesaje.get('patente').errors && (formPesaje.get('patente').touched 
+                            || formPesaje.get('patente').dirty)" class="alert alert-danger">
+                    el numero de Patente es obligatorio
+                </div>
+                <div class="form-group">
+                    <label for="tipoVehiculo">Tipo de Vehiculo</label>
+                    <input type="text" formControlName="tipoVehiculo" class="form-control" placeholder="Tipo de vehiculo">
+                </div>
+                <div *ngIf="formPesaje.get('tipoVehiculo').errors && (formPesaje.get('tipoVehiculo').touched 
+                            || formPesaje.get('tipoVehiculo').dirty)" class="alert alert-danger">
+                    El Tipo de vehiculo es obligatorio
+                </div>
+            </div>
+            
+        </div>
+
+        <div class="row">
+
+            <button type="submit" [disabled]="!formPesaje.valid" class="btn btn-primary">Registrar</button>
+
+        </div>
+
+    </form>
+
+</div>

@@ -1,0 +1,18 @@
+form{
+    margin-top: 6%;
+    opacity: 0.9;
+}
+button{
+    margin: 0 auto;
+}
+.card{
+    color :white !important;
+    font-weight: bold;
+    background: transparent;
+}
+
+.card-title img{
+    display: block;
+    margin:auto;
+    
+}

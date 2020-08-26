@@ -1,0 +1,34 @@
+.footer{
+    background-color: #1F72A6;;
+}
+a{
+    display: block;
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    margin: 5px;
+}
+
+.redes-sociales i{
+    font-size: 30px;
+    color: white;
+    margin: 10px;
+}
+.subscribe *{
+    display: inline;
+}
+.redes-sociales{
+    margin: 5px;
+    
+}
+label{
+    color: white;
+    font-weight: bold;
+}
+
+.row div{
+    margin: 10px;
+}
+
+
+

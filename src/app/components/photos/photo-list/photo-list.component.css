@@ -1,0 +1,36 @@
+img{
+    height: 180px;
+    width: 130px;
+    overflow: hidden;
+    margin: 0 auto;
+}
+.content{
+    padding-top: 20px;
+    width: 65%;
+    margin: 0 auto;
+    height: 80%;
+}
+
+
+pagination-controls{
+    margin: 0 auto;
+    font-weight: bold;
+    bottom: 0;
+}
+.card{
+    margin: 10px;
+    height: 250px;
+    width: 200px;
+    border-radius: 15px;
+    background: transparent;
+    border: 1px solid #A92EFF;
+    cursor: pointer;
+}
+.card-header{
+    background: none;
+    border:none;
+    margin: 0 auto;
+}
+.products :hover {
+    border: 2px solid #A92EFF;
+}

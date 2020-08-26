@@ -1,0 +1,25 @@
+<div class="card">
+    <h2 class="card-title">Solicitar Pedido</h2>
+    <div class="card-body">
+        <form [formGroup]="formPedido">
+                <div class="form-group">
+                    <label for="nombre" class="form-label">Nombre</label>
+                    <input type="text" formControlName="nombre" class="form-control">
+                </div>
+                <div class="form-group">
+                    <label for="razonSocial" class="form-label">Razón Social</label>
+                    <input type="text" formControlName="razonSocial" class="form-control">
+                </div>
+                <div class="form-group">
+                    <label for="cantidad" class="form-label">Cantidad</label>
+                    <input type="text" formControlName="cantidad" class="form-control">
+                </div>
+                <div class="form-group">
+                    <label for="tipoProducto" class="form-label">tipo de Producto</label>
+                    <input type="text" formControlName="tipoProducto" class="form-control">
+                </div>
+
+                <button class="btn btn-primary">Registrar</button>
+        </form>
+    </div>
+</div>

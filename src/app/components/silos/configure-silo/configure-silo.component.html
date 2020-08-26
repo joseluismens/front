@@ -1,0 +1,91 @@
+<div class="container">
+
+    <table class="table">
+      <thead class="thead-light">
+        <tr>
+          <th scope="col">Nombre</th>
+          <th scope="col">Capacidad Total</th>
+          <th scope="col">Stock</th>
+          <th scope="col">Tipo de Producto</th>
+          <th scope="col">Estado</th>
+          <th scope="col">Acción</th>
+
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let silo of silos" class=silo>
+          <td>{{silo.nombre}}</td>
+          <td>{{silo.capacidadTotal}}</td>
+          <td>{{silo.stock}}</td>
+          <td>{{silo.tipoProducto}}</td>
+          <td>{{silo.estado}}</td>
+          <td><button type="button" class="btn btn-warning" data-toggle="modal" data-target="#updateSilo"
+            (click)="cargarDatos(silo,silo._id)"
+            >Actualizar</button>
+          <button type="button" class="btn btn-danger m-1" (click)="deleteSilo(silo._id)">Eliminar</button></td>
+          
+        </tr>
+        <tr>
+      </tbody>
+    </table>
+  
+<div class="modal fade" id="updateSilo" tabindex="-1" role="dailog">
+  <div class="modal-dialog">
+    <div class="modal-content">
+        <form [formGroup]="formSilo" (ngSubmit)="onSubmit()" novalidate>
+
+            <div class="client card">
+                <div class="modal-header">
+                    <h4 class="modal-title">Actualizar Silo</h4>
+                    <button type="button" class="close" data-dismiss="modal">x</button>
+                  </div>
+    
+                <div class="card-body">
+                    <h5 class="card-title">Descripción</h5>
+                    <div class="form-group">
+                        <label for="nombre" class="form-label ml-1">Nombre</label>
+                        <input type="text" formControlName="nombre" class="form-control" placeholder="Nombre">
+                       
+                    </div>
+                    <div class="form-group">
+                        <label for="capacidadTotal" class="form-label ml-1">Capacidad Total</label>
+                        <input type="text" formControlName="capacidadTotal" 
+                        class="form-control" placeholder="Capacidad Total">
+                       
+                    </div>
+                    <div class="form-group">
+                        <label for="stock" class="form-label ml-1">Stock Actual</label>
+                        <input type="text" formControlName="stock" 
+                        class="form-control" placeholder="Stock Actual">
+                       
+                    </div>
+                    <div class="form-group">
+                        <label for="tipoProducto" class="form-label ml-1">Tipo de Producto</label>
+                        <input type="text" formControlName="tipoProducto" 
+                        class="form-control" placeholder="Tipo de Producto">
+                       
+                    </div>
+                    <div class="form-group">
+                        <label for="estado" class="form-label ml-1">Estado</label>
+                        <input type="text" formControlName="estado" 
+                        class="form-control" placeholder="Estado">
+                       
+                    </div>
+              
+            
+             <div class="modal-footer">
+                <button type="submit" [disabled]="!formSilo.valid" class="btn btn-primary">Actualizar</button>
+                <button type="button" class="btn btn-danger" data-dismiss="modal">Cerrar</button>
+      
+              </div>
+                </div>
+            </div>
+    
+    
+        </form>
+     
+
+
+    </div>
+  </div>
+</div>

@@ -1,0 +1,18 @@
+.picsum-img-wrapper{
+  width: inherit;
+  height: 600px;
+}
+.carrusel{
+  width: inherit;
+  overflow: hidden;
+}
+.carrusel img{
+  width: inherit;
+
+}
+h1{
+  text-align: center;
+  color: white;
+  font-weight: bold;
+
+}

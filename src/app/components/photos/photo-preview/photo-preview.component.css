@@ -1,0 +1,16 @@
+.card{
+    background: transparent;
+    font-weight: bold;
+    padding: 10px;
+    border-radius: 30px;
+
+}
+.data{
+    padding-bottom: 30px;
+}
+img{
+    border-radius: 20px;
+}
+.row{
+    padding-top: 30px;
+}

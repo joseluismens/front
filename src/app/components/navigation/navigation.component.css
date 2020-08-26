@@ -1,0 +1,50 @@
+::ng-deep .ng-sidebar{
+    background-color:transparent;
+    width: 320px;
+    padding: 2em 3em ;
+    box-shadow: 0 0 2.5em rgba(85,85,85,0.5);
+    overflow-y: hidden;
+}
+
+@media (min-width: 768px) {
+    .navbar-brand.abs
+        {
+            position: absolute;
+            width: 100%;
+            left: 0;
+            text-align: center;
+        }
+    }
+.dropdown-menu{
+    margin-top: 40px;
+    background: rgba(156, 156, 156, 0.2);
+}
+.dropdown-menu a:active{
+    background: rgb(30, 26, 26)
+}
+.nav-link{
+    font-weight: bold;
+}
+ng-template{
+    display: inline-block;
+}
+ul{
+    background: transparent;
+}
+#accordionMenu{
+    background: transparent;
+}
+a{
+    cursor: pointer;
+}
+.card{
+    background: transparent;
+    width: 250px;
+    font-weight: bold;
+    color: white;
+}
+
+.card li{
+    border-bottom: 0.5px solid grey;
+
+}

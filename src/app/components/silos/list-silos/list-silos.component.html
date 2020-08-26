@@ -1,0 +1,30 @@
+<div class="container">
+
+    <table class="table">
+      <thead class="thead-light">
+        <tr>
+          <th scope="col">Nombre</th>
+          <th scope="col">Capacidad Total</th>
+          <th scope="col">Stock</th>
+          <th scope="col">Tipo de Producto</th>
+          <th scope="col">Estado</th>
+          <th scope="col">Acción</th>
+
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let silo of silos" class=silo>
+          <td>{{silo.nombre}}</td>
+          <td>{{silo.capacidadTotal}}</td>
+          <td>{{silo.stock}}</td>
+          <td>{{silo.tipoProducto}}</td>
+          <td>{{silo.estado}}</td>
+          <td><button type="button" class="btn btn-primary">Ver</button></td>
+
+           
+          
+        </tr>
+        <tr>
+      </tbody>
+    </table>
+  
